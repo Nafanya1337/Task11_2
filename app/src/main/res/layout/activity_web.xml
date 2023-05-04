@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".WebActivity">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textColor="@color/black"
+            android:textSize="25sp"
+            android:text="Работа с сетью и WebView"/>
+
+
+        <EditText
+            android:id="@+id/wiki"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:lines="1"
+            android:hint="Поиск по википедии"
+            android:layout_marginHorizontal="25dp"/>
+
+        <WebView
+            android:id="@+id/webBrowser"
+            android:layout_width="match_parent"
+            android:layout_height="650dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+
+    <Button
+        android:onClick="openWeb"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginHorizontal="25dp"
+        android:text="Найти" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="25dp">
+
+        <Button
+            android:onClick="openWeb"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:drawableLeft="@drawable/baseline_arrow_back_24"
+            android:text="Назад" />
+
+        <Button
+            android:onClick="openWeb"
+            android:layout_weight="1"
+            android:layout_gravity="right"
+            android:layout_marginLeft="10dp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:drawableRight="@drawable/baseline_arrow_forward_24"
+            android:text="Вперед"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="25dp">
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:onClick="closeAll"
+            android:text="Очистить историю" />
+
+        <Button
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:textSize="13sp"
+            android:onClick="goToHttp"
+            android:text="Перейти к HttpsURLConnection" />
+    </LinearLayout>
+
+
+</LinearLayout>
